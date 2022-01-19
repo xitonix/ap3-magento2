@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Autopilot_AP3Connector::main_menu"
+             title="Autopilot"
+             module="Autopilot_AP3Connector"
+             sortOrder="110"
+             dependsOnModule="Autopilot_AP3Connector"
+             resource="Autopilot_AP3Connector::menu"
+        />
+        <add id="Autopilot_AP3Connector::config_menu"
+             title="Configuration"
+             module="Autopilot_AP3Connector"
+             sortOrder="10"
+             resource="Autopilot_AP3Connector::config"
+             parent="Autopilot_AP3Connector::main_menu"
+             action="adminhtml/system_config/edit/section/autopilot_configuration"
+        />
+    </menu>
+</config>
